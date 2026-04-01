@@ -32,13 +32,13 @@ class GLMProvider(BaseProvider):
 
     def chat(
         self,
-        messages: list[ChatMessage],
+        messages: list[ChatMessage] | list[dict],
         **kwargs
     ) -> ChatResponse:
         """Synchronous chat completion.
 
         Args:
-            messages: List of chat messages
+            messages: List of chat messages (ChatMessage objects or dicts)
             **kwargs: Additional parameters
 
         Returns:
@@ -46,8 +46,11 @@ class GLMProvider(BaseProvider):
         """
         model = self._get_model(**kwargs)
 
-        # Convert messages
-        glm_messages = [msg.to_dict() for msg in messages]
+        # Convert messages - handle both ChatMessage objects and dicts
+        if messages and isinstance(messages[0], dict):
+            glm_messages = messages
+        else:
+            glm_messages = [msg.to_dict() for msg in messages]
 
         # Make API call
         response = self.client.chat.completions.create(
@@ -78,13 +81,13 @@ class GLMProvider(BaseProvider):
 
     def chat_stream(
         self,
-        messages: list[ChatMessage],
+        messages: list[ChatMessage] | list[dict],
         **kwargs
     ) -> Generator[str, None, None]:
         """Streaming chat completion.
 
         Args:
-            messages: List of chat messages
+            messages: List of chat messages (ChatMessage objects or dicts)
             **kwargs: Additional parameters
 
         Yields:
@@ -92,8 +95,11 @@ class GLMProvider(BaseProvider):
         """
         model = self._get_model(**kwargs)
 
-        # Convert messages
-        glm_messages = [msg.to_dict() for msg in messages]
+        # Convert messages - handle both ChatMessage objects and dicts
+        if messages and isinstance(messages[0], dict):
+            glm_messages = messages
+        else:
+            glm_messages = [msg.to_dict() for msg in messages]
 
         # Stream API call
         response = self.client.chat.completions.create(

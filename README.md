@@ -32,7 +32,14 @@
 
 <div align="center">
 
-![Clawd Codex CLI in Action](assets/clawd-code-cli.png)
+| **Core Features Showcase** |
+|:---:|
+| ![File Operations](assets/clawd-code-write-read.png) |
+| *Seamless File Reading & Writing* |
+| ![Bash Execution](assets/clawd-code-bash.png) |
+| *Real-time Bash Command Execution* |
+| ![Web Fetch](assets/claude-code-webfetch.png) |
+| *Instant Web Content Extraction* |
 
 **Real CLI • Real Usage • Real Community**
 
@@ -345,7 +352,14 @@ If you find this useful, please **star** ⭐ the repo!
 
 <div align="center">
 
-!\[Clawd Codex CLI 实际运行]\(assets/clawd-code-cli.png null)
+| **核心功能演示** |
+|:---:|
+| ![文件操作](assets/clawd-code-write-read.png) |
+| *无缝的文件读取与写入* |
+| ![Bash 执行](assets/clawd-code-bash.png) |
+| *实时的 Bash 命令执行* |
+| ![网页获取](assets/claude-code-webfetch.png) |
+| *即时的网页内容提取* |
 
 **真实的 CLI • 真实的使用 • 真实的社区**
 

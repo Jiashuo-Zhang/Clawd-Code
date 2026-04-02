@@ -176,17 +176,37 @@ class ClawdREPL:
 
     def run(self):
         """Run the REPL."""
-        self.console.print("[bold blue]Clawd Codex REPL[/bold blue]")
-        self.console.print(f"Provider: [green]{self.provider_name}[/green]")
-        self.console.print(f"Model: [green]{self.provider.model}[/green]")
-        self.console.print("Type [bold]/help[/bold] for commands, [bold]/exit[/bold] to quit.\n")
+        from src import __version__
+        import os
+
+        # 🦊 GitHub/GitLab-style Fox Mascot ASCII Art
+        fox_ascii = """[orange3]
+          ^._.^
+         / o o \\
+        (   T   )
+         `~---~'
+        [/orange3]"""
+
+        self.console.print(fox_ascii)
+        self.console.print(f"[bold white]Clawd Codex [dim]v{__version__}[/dim][/bold white]")
+        
+        # Provider & Model Info
+        provider_info = f"[dim]{self.provider.model} · {self.provider_name.upper()} Provider[/dim]"
+        self.console.print(provider_info)
+
+        # Current Directory (with home shortening)
+        cwd = os.getcwd()
+        home = os.path.expanduser("~")
+        display_path = cwd.replace(home, "~") if cwd.startswith(home) else cwd
+        self.console.print(f"[bold blue]{display_path}[/bold blue]\n")
 
         while True:
             try:
                 # Dynamic prompt based on multiline mode
-                prompt = '... ' if self.multiline_mode else '>>> '
+                # Using '❯' for a modern feel
+                prompt_text = '... ' if self.multiline_mode else '❯ '
                 user_input = self.prompt_session.prompt(
-                    prompt,
+                    prompt_text,
                     multiline=self.multiline_mode
                 )
 
@@ -306,7 +326,7 @@ class ClawdREPL:
         self.session.conversation.add_user_message(user_input)
 
         try:
-            self.console.print("\n[bold green]Assistant:[/bold green]")
+            self.console.print("\n[bold]Assistant[/bold]")
 
             def on_event(ev: ToolEvent) -> None:
                 if ev.kind == "tool_use":
@@ -314,7 +334,7 @@ class ClawdREPL:
                     if isinstance(summary, str) and summary:
                         summary = self._shorten_path_text(summary)
                     suffix = f" [dim]({summary})[/dim]" if summary else ""
-                    self.console.print(f"[dim]•[/dim] [bold cyan]{ev.tool_name}[/bold cyan]{suffix}")
+                    self.console.print(f"[dim]•[/dim] [cyan]{ev.tool_name}[/cyan]{suffix} [dim]running...[/dim]")
                     return
                 if ev.kind == "tool_result":
                     if ev.is_error:
@@ -336,16 +356,18 @@ class ClawdREPL:
                     self.console.print(f"[red]  ↳ {msg}[/red]")
 
             # Use agent loop with tools for any provider that supports it
-            response_text = run_agent_loop(
-                conversation=self.session.conversation,
-                provider=self.provider,
-                tool_registry=self.tool_registry,
-                tool_context=self.tool_context,
-                verbose=False,
-                on_event=on_event,
-            )
-            self.console.print(response_text, style="green")
-
+            from rich.status import Status
+            with self.console.status("[dim]Thinking...[/dim]", spinner="dots"):
+                response_text = run_agent_loop(
+                    conversation=self.session.conversation,
+                    provider=self.provider,
+                    tool_registry=self.tool_registry,
+                    tool_context=self.tool_context,
+                    verbose=False,
+                    on_event=on_event,
+                )
+            
+            self.console.print(Markdown(response_text))
             self.console.print("\n")
 
         except Exception as e:

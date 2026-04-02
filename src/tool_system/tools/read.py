@@ -37,6 +37,13 @@ class FileReadTool:
         if not isinstance(file_path, str):
             raise ToolInputError("file_path must be a string")
 
+        if file_path.startswith(("http://", "https://")):
+            return ToolResult(
+                name="Read",
+                output={"error": f"The 'Read' tool is for local files only. Use 'WebFetch' to access URLs: {file_path}"},
+                is_error=True
+            )
+
         limit = tool_input.get("limit")
         offset = tool_input.get("offset")
         pages = tool_input.get("pages")

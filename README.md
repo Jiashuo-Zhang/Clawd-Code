@@ -18,6 +18,10 @@
 
 **🔥 Active Development • New Features Weekly 🔥**
 
+<h2><strong>FLEXIBLE SKILL SYSTEMS</strong></h2>
+
+<strong>Markdown-native slash commands with arguments, tool limits, and project/user skill loading.</strong>
+
 </div>
 
 ***
@@ -34,14 +38,14 @@
 
 | **Core Features Showcase** |
 |:---:|
+| ![Skills (Slash Commands)](assets/clawd-code-skill.png) |
+| **Flexible Skill Systems** |
 | ![Bash Execution](assets/clawd-code-bash.png) |
 | *Real-time Tool Execution* |
 | ![Web Fetch](assets/claude-code-webfetch.png) |
 | *Instant Web Content Extraction* |
 | ![File Operations](assets/clawd-code-write-read.png) |
 | *Seamless Coding & Debugging* |
-| ![Skills (Slash Commands)](assets/clawd-code-skill.png) |
-| *Flexible Skill Systems* |
 
 **Real CLI • Real Usage • Real Community**
 
@@ -69,6 +73,24 @@
 </a>
 
 ## ✨ Features
+
+### FLEXIBLE SKILL SYSTEMS
+
+```md
+---
+description: Explain code with diagrams and analogies
+allowed-tools:
+  - Read
+  - Grep
+  - Glob
+arguments: [path]
+---
+
+Explain the code in $path. Start with an analogy, then draw a diagram.
+```
+
+- Markdown-based `SKILL.md` slash commands
+- Supports project skills, user skills, named arguments, and tool limits
 
 ### Multi-Provider Support
 
@@ -105,9 +127,9 @@ clawd config       # View settings
 
 | Component     | Status     | Count     |
 | ------------- | ---------- | --------- |
-| Commands      | ✅ Complete | 150+      |
-| Tools         | ✅ Complete | 100+      |
-| Test Coverage | ✅ 90%+     | 75+ tests |
+| REPL Commands | ✅ Complete | 6+ built-ins |
+| Tool System   | ✅ Complete | 30+ tools |
+| Automated Tests | ✅ Present | Skills, providers, REPL, tools |
 | Documentation | ✅ Complete | 10+ docs  |
 
 ### Core Systems
@@ -310,12 +332,14 @@ Example:
 Clawd-Code/
 ├── src/
 │   ├── cli.py           # CLI entry
-│   ├── config.py        # Configuration
-│   ├── repl/            # Interactive REPL
 │   ├── providers/       # LLM providers
-│   └── agent/           # Session management
-├── tests/               # 75+ tests
-└── docs/                # Complete docs
+│   ├── repl/            # Interactive REPL
+│   ├── skills/          # SKILL.md loading and creation
+│   └── tool_system/     # Tool registry, loop, validation
+├── tests/               # Core test suite
+├── .clawd/
+│   └── skills/          # Project-local custom skills
+└── FEATURE_LIST.md      # Current feature status
 ```
 
 ***
@@ -414,6 +438,10 @@ If you find this useful, please **star** ⭐ the repo!
 
 **🔥 活跃开发中 • 每周更新新功能 🔥**
 
+<h2><strong>FLEXIBLE SKILL SYSTEMS</strong></h2>
+
+<strong>基于 Markdown 的斜杠技能系统，支持参数替换、工具限制，以及项目级 / 用户级技能加载。</strong>
+
 </div>
 
 ***
@@ -430,14 +458,14 @@ If you find this useful, please **star** ⭐ the repo!
 
 | **核心功能演示** |
 |:---:|
+| ![Skills（斜杠命令）](assets/clawd-code-skill.png) |
+| **Flexible Skill Systems** |
 | ![Bash 执行](assets/clawd-code-bash.png) |
 | *实时的 Bash 命令执行* |
 | ![网页获取](assets/claude-code-webfetch.png) |
 | *即时的网页内容提取* |
 | ![文件操作](assets/clawd-code-write-read.png) |
 | *无缝的文件读取与写入* |
-| ![Skills（斜杠命令）](assets/clawd-code-skill.png) |
-| *基于 SKILL.md 的技能系统：支持参数与工具限制* |
 
 **真实的 CLI • 真实的使用 • 真实的社区**
 
@@ -465,6 +493,24 @@ If you find this useful, please **star** ⭐ the repo!
 </a>
 
 ## ✨ 特性
+
+### FLEXIBLE SKILL SYSTEMS
+
+```md
+---
+description: 用类比 + 图示解释代码
+allowed-tools:
+  - Read
+  - Grep
+  - Glob
+arguments: [path]
+---
+
+请解释 $path 的实现：先给一个类比，再画一个结构示意图。
+```
+
+- 基于 `SKILL.md` 的 Markdown 斜杠命令
+- 支持项目级技能、用户级技能、命名参数替换与工具限制
 
 ### 多提供商支持
 
@@ -501,9 +547,9 @@ clawd config       # 查看设置
 
 | 组件    | 状态     | 数量     |
 | ----- | ------ | ------ |
-| 命令    | ✅ 完成   | 150+   |
-| 工具    | ✅ 完成   | 100+   |
-| 测试覆盖率 | ✅ 90%+ | 75+ 测试 |
+| REPL 命令 | ✅ 完成   | 6+ 内置命令 |
+| 工具系统 | ✅ 完成   | 30+ 工具 |
+| 自动化测试 | ✅ 已覆盖  | Skills、providers、REPL、tools |
 | 文档    | ✅ 完成   | 10+ 文档 |
 
 ### 核心系统
@@ -705,12 +751,14 @@ arguments: [path]
 Clawd-Code/
 ├── src/
 │   ├── cli.py           # CLI 入口
-│   ├── config.py        # 配置
-│   ├── repl/            # 交互式 REPL
 │   ├── providers/       # LLM 提供商
-│   └── agent/           # 会话管理
-├── tests/               # 75+ 测试
-└── docs/                # 完整文档
+│   ├── repl/            # 交互式 REPL
+│   ├── skills/          # SKILL.md 加载与创建
+│   └── tool_system/     # 工具注册、循环与校验
+├── tests/               # 核心测试套件
+├── .clawd/
+│   └── skills/          # 项目级自定义技能
+└── FEATURE_LIST.md      # 当前功能状态
 ```
 
 ***

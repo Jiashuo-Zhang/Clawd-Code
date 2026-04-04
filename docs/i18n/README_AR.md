@@ -1,6 +1,6 @@
 <div align="center" dir="rtl">
 
-[English](README.md) | [中文](README.md#中文版) | [Français](README_FR.md) | [Русский](README_RU.md) | [हिन्दी](README_HI.md) | **العربية** | [Português](README_PT.md)
+[English](../../README.md) | [中文](../../README.md#中文版) | [Français](README_FR.md) | [Русский](README_RU.md) | [हिन्दी](README_HI.md) | **العربية** | [Português](README_PT.md)
 
 # 🚀 Claude Code Python
 
@@ -33,13 +33,13 @@
 
 | **Core Features Showcase** |
 |:---:|
-| ![Bash Execution](assets/clawd-code-bash.png) |
+| ![Bash Execution](../../assets/clawd-code-bash.png) |
 | *Real-time Tool Execution* |
-| ![Web Fetch](assets/claude-code-webfetch.png) |
+| ![Web Fetch](../../assets/claude-code-webfetch.png) |
 | *Instant Web Content Extraction* |
-| ![File Operations](assets/clawd-code-write-read.png) |
+| ![File Operations](../../assets/clawd-code-write-read.png) |
 | *Seamless Coding & Debugging* |
-| ![Skills (Slash Commands)](assets/clawd-code-skill.png) |
+| ![Skills (Slash Commands)](../../assets/clawd-code-skill.png) |
 | *Flexible Skill Systems* |
 
 **CLI حقيقي • استخدام حقيقي • مجتمع حقيقي**
@@ -91,7 +91,7 @@ Assistant: أهلاً! أنا Clawd Codex، إعادة تنفيذ بـ Python...
 
 ### Skills (Slash Commands)
 
-See [README.md](README.md#skills-slash-commands) for a quick tutorial on creating skills under `.clawd/skills/<skill-name>/SKILL.md`.
+See [README.md](../../README.md#skills-slash-commands) for a quick tutorial on creating skills under `.clawd/skills/<skill-name>/SKILL.md`.
 
 ### CLI كامل
 
@@ -198,7 +198,7 @@ python -m src.cli --help   # عرض المساعدة
 
 ### مثال على الجلسة
 
-![مثال على الجلسة](assets/clawd-code-cli.png)
+![مثال على الجلسة](../../assets/clawd-code-tool-skill-json.png)
 
 ***
 
@@ -263,16 +263,16 @@ pip install -e .[dev]
 python -m pytest tests/ -v
 ```
 
-راجع [CONTRIBUTING.md](CONTRIBUTING.md) للإرشادات.
+راجع [CONTRIBUTING.md](../../CONTRIBUTING.md) للإرشادات.
 
 ***
 
 ## 📖 التوثيق
 
-- **[SETUP_GUIDE.md](SETUP_GUIDE.md)** — التثبيت المفصل
-- **[CONTRIBUTING.md](CONTRIBUTING.md)** — دليل التطوير
-- **[TESTING.md](TESTING.md)** — دليل الاختبار
-- **[CHANGELOG.md](CHANGELOG.md)** — تاريخ الإصدارات
+- **[SETUP_GUIDE.md](../guide/SETUP_GUIDE.md)** — التثبيت المفصل
+- **[CONTRIBUTING.md](../../CONTRIBUTING.md)** — دليل التطوير
+- **[TESTING.md](../guide/TESTING.md)** — دليل الاختبار
+- **[CHANGELOG.md](../../CHANGELOG.md)** — تاريخ الإصدارات
 
 ***
 
@@ -297,7 +297,7 @@ python -m pytest tests/ -v
 
 ## 📄 الترخيص
 
-ترخيص MIT — راجع [LICENSE](LICENSE)
+ترخيص MIT — راجع [LICENSE](../../LICENSE)
 
 ***
 

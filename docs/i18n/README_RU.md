@@ -1,6 +1,6 @@
 <div align="center">
 
-[English](README.md) | [中文](README.md#中文版) | [Français](README_FR.md) | **Русский** | [हिन्दी](README_HI.md) | [العربية](README_AR.md) | [Português](README_PT.md)
+[English](../../README.md) | [中文](../../README.md#中文版) | [Français](README_FR.md) | **Русский** | [हिन्दी](README_HI.md) | [العربية](README_AR.md) | [Português](README_PT.md)
 
 # 🚀 Claude Code Python
 
@@ -33,13 +33,13 @@
 
 | **Core Features Showcase** |
 |:---:|
-| ![Bash Execution](assets/clawd-code-bash.png) |
+| ![Bash Execution](../../assets/clawd-code-bash.png) |
 | *Real-time Tool Execution* |
-| ![Web Fetch](assets/claude-code-webfetch.png) |
+| ![Web Fetch](../../assets/claude-code-webfetch.png) |
 | *Instant Web Content Extraction* |
-| ![File Operations](assets/clawd-code-write-read.png) |
+| ![File Operations](../../assets/clawd-code-write-read.png) |
 | *Seamless Coding & Debugging* |
-| ![Skills (Slash Commands)](assets/clawd-code-skill.png) |
+| ![Skills (Slash Commands)](../../assets/clawd-code-skill.png) |
 | *Flexible Skill Systems* |
 
 **Реальный CLI • Реальное использование • Реальное сообщество**
@@ -91,7 +91,7 @@ Assistant: Привет! Я Clawd Codex, повторная реализация
 
 ### Skills (Slash Commands)
 
-See [README.md](README.md#skills-slash-commands) for a quick tutorial on creating skills under `.clawd/skills/<skill-name>/SKILL.md`.
+See [README.md](../../README.md#skills-slash-commands) for a quick tutorial on creating skills under `.clawd/skills/<skill-name>/SKILL.md`.
 
 ### Полный CLI
 
@@ -198,7 +198,7 @@ python -m src.cli --help   # Показать справку
 
 ### Пример сессии
 
-![Пример сессии](assets/clawd-code-cli.png)
+![Пример сессии](../../assets/clawd-code-tool-skill-json.png)
 
 ***
 
@@ -263,16 +263,16 @@ pip install -e .[dev]
 python -m pytest tests/ -v
 ```
 
-См. [CONTRIBUTING.md](CONTRIBUTING.md) для руководства.
+См. [CONTRIBUTING.md](../../CONTRIBUTING.md) для руководства.
 
 ***
 
 ## 📖 Документация
 
-- **[SETUP_GUIDE.md](SETUP_GUIDE.md)** — Подробная установка
-- **[CONTRIBUTING.md](CONTRIBUTING.md)** — Руководство по разработке
-- **[TESTING.md](TESTING.md)** — Руководство по тестированию
-- **[CHANGELOG.md](CHANGELOG.md)** — История версий
+- **[SETUP_GUIDE.md](../guide/SETUP_GUIDE.md)** — Подробная установка
+- **[CONTRIBUTING.md](../../CONTRIBUTING.md)** — Руководство по разработке
+- **[TESTING.md](../guide/TESTING.md)** — Руководство по тестированию
+- **[CHANGELOG.md](../../CHANGELOG.md)** — История версий
 
 ***
 
@@ -297,7 +297,7 @@ python -m pytest tests/ -v
 
 ## 📄 Лицензия
 
-MIT Лицензия — См. [LICENSE](LICENSE)
+MIT Лицензия — См. [LICENSE](../../LICENSE)
 
 ***
 

@@ -1,6 +1,6 @@
 <div align="center">
 
-[English](README.md) | [中文](README.md#中文版) | [Français](README_FR.md) | [Русский](README_RU.md) | [हिन्दी](README_HI.md) | [العربية](README_AR.md) | **Português**
+[English](../../README.md) | [中文](../../README.md#中文版) | [Français](README_FR.md) | [Русский](README_RU.md) | [हिन्दी](README_HI.md) | [العربية](README_AR.md) | **Português**
 
 # 🚀 Claude Code Python
 
@@ -33,13 +33,13 @@
 
 | **Core Features Showcase** |
 |:---:|
-| ![Bash Execution](assets/clawd-code-bash.png) |
+| ![Bash Execution](../../assets/clawd-code-bash.png) |
 | *Real-time Tool Execution* |
-| ![Web Fetch](assets/claude-code-webfetch.png) |
+| ![Web Fetch](../../assets/claude-code-webfetch.png) |
 | *Instant Web Content Extraction* |
-| ![File Operations](assets/clawd-code-write-read.png) |
+| ![File Operations](../../assets/clawd-code-write-read.png) |
 | *Seamless Coding & Debugging* |
-| ![Skills (Slash Commands)](assets/clawd-code-skill.png) |
+| ![Skills (Slash Commands)](../../assets/clawd-code-skill.png) |
 | *Flexible Skill Systems* |
 
 **CLI Real • Uso Real • Comunidade Real**
@@ -91,7 +91,7 @@ Assistant: Oi! Sou o Clawd Codex, uma reimplementação em Python...
 
 ### Skills (Slash Commands)
 
-See [README.md](README.md#skills-slash-commands) for a quick tutorial on creating skills under `.clawd/skills/<skill-name>/SKILL.md`.
+See [README.md](../../README.md#skills-slash-commands) for a quick tutorial on creating skills under `.clawd/skills/<skill-name>/SKILL.md`.
 
 ### CLI Completo
 
@@ -198,7 +198,7 @@ python -m src.cli --help   # Mostrar ajuda
 
 ### Exemplo de Sessão
 
-![Exemplo de Sessão](assets/clawd-code-cli.png)
+![Exemplo de Sessão](../../assets/clawd-code-tool-skill-json.png)
 
 ***
 
@@ -263,16 +263,16 @@ pip install -e .[dev]
 python -m pytest tests/ -v
 ```
 
-Veja [CONTRIBUTING.md](CONTRIBUTING.md) para diretrizes.
+Veja [CONTRIBUTING.md](../../CONTRIBUTING.md) para diretrizes.
 
 ***
 
 ## 📖 Documentação
 
-- **[SETUP_GUIDE.md](SETUP_GUIDE.md)** — Instalação detalhada
-- **[CONTRIBUTING.md](CONTRIBUTING.md)** — Guia de desenvolvimento
-- **[TESTING.md](TESTING.md)** — Guia de testes
-- **[CHANGELOG.md](CHANGELOG.md)** — Histórico de versões
+- **[SETUP_GUIDE.md](../guide/SETUP_GUIDE.md)** — Instalação detalhada
+- **[CONTRIBUTING.md](../../CONTRIBUTING.md)** — Guia de desenvolvimento
+- **[TESTING.md](../guide/TESTING.md)** — Guia de testes
+- **[CHANGELOG.md](../../CHANGELOG.md)** — Histórico de versões
 
 ***
 
@@ -297,7 +297,7 @@ Veja [CONTRIBUTING.md](CONTRIBUTING.md) para diretrizes.
 
 ## 📄 Licença
 
-Licença MIT — Veja [LICENSE](LICENSE)
+Licença MIT — Veja [LICENSE](../../LICENSE)
 
 ***
 

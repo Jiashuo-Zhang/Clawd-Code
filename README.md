@@ -1,6 +1,6 @@
 <div align="center">
 
-**English** | [中文](#中文版) | [Français](README_FR.md) | [Русский](README_RU.md) | [हिन्दी](README_HI.md) | [العربية](README_AR.md) | [Português](README_PT.md)
+**English** | [中文](#中文版) | [Français](docs/i18n/README_FR.md) | [Русский](docs/i18n/README_RU.md) | [हिन्दी](docs/i18n/README_HI.md) | [العربية](docs/i18n/README_AR.md) | [Português](docs/i18n/README_PT.md)
 
 # 🚀 Claude Code Python
 
@@ -358,9 +358,9 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 ## 📖 Documentation
 
-- **[SETUP_GUIDE.md](SETUP_GUIDE.md)** — Detailed installation
+- **[SETUP_GUIDE.md](docs/guide/SETUP_GUIDE.md)** — Detailed installation
 - **[CONTRIBUTING.md](CONTRIBUTING.md)** — Development guide
-- **[TESTING.md](TESTING.md)** — Testing guide
+- **[TESTING.md](docs/guide/TESTING.md)** — Testing guide
 - **[CHANGELOG.md](CHANGELOG.md)** — Version history
 
 ***
@@ -418,7 +418,7 @@ If you find this useful, please **star** ⭐ the repo!
 
 <div align="center">
 
-[English](#-clawd-codex) | **中文** | [Français](README_FR.md) | [Русский](README_RU.md) | [हिन्दी](README_HI.md) | [العربية](README_AR.md) | [Português](README_PT.md)
+[English](#-clawd-codex) | **中文** | [Français](docs/i18n/README_FR.md) | [Русский](docs/i18n/README_RU.md) | [हिन्दी](docs/i18n/README_HI.md) | [العربية](docs/i18n/README_AR.md) | [Português](docs/i18n/README_PT.md)
 
 # 🚀 Claude Code Python
 
@@ -777,9 +777,9 @@ python -m pytest tests/ -v
 
 ## 📖 文档
 
-- **[SETUP_GUIDE.md](SETUP_GUIDE.md)** — 详细安装说明
+- **[SETUP_GUIDE.md](docs/guide/SETUP_GUIDE.md)** — 详细安装说明
 - **[CONTRIBUTING.md](CONTRIBUTING.md)** — 开发指南
-- **[TESTING.md](TESTING.md)** — 测试指南
+- **[TESTING.md](docs/guide/TESTING.md)** — 测试指南
 - **[CHANGELOG.md](CHANGELOG.md)** — 版本历史
 
 ***
